@@ -10,7 +10,7 @@ end
 
 Spork.each_run do
   # This code will be run each time you run your specs.
-  
+  SampleApp::Application.reload_routes!
 end
 
 # --- Instructions ---
