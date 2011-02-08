@@ -26,7 +26,7 @@ This is Tom's master branch of the R3T sample app.
 		
 		git push heroku rspec_250:master
 		
-Full gem list installed in my gemset:
+## Full gem list installed in my gemset: ##
 
 * abstract (1.0.0)
 * actionmailer (3.0.3)
