@@ -20,7 +20,7 @@ This is Tom's master branch of the R3T sample app.
 * In order for spec/controllers/pages\_controller\_spec.rb to see inside rendered HTML
   (due to not having spec/views tests) had to add:
 
-		render\_views
+		render_views
 
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
