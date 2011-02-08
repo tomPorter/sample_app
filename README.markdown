@@ -11,18 +11,20 @@ This is Tom's master branch of the R3T sample app.
 * Followed R3T suggestion to remove spec subdirs and concentrate on spec/controllers:
 		 
 		git rm -r spec/views/
-	  git rm -r spec/helpers/
+	
+		git rm -r spec/helpers/
 
 * spork/autotest does not always pick up changes, specifically did not pickup 
   changes to application.html.erb.
 * Had to add webrat to Gemfile for RSpec 2.50 to use have\_selector in spec example.
 * In order for spec/controllers/pages\_controller\_spec.rb to see inside rendered HTML
   (due to not having spec/views tests) had to add:
-		render\_views
 
-## Pushed to heroku with: ##
+	render\_views
+
+* When originally in rspec\_250 branch Pushed to heroku with:
 		
-		git push heroku rspec_250:master
+	git push heroku rspec_250:master
 		
 Full gem list installed in my gemset:
 
