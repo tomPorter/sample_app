@@ -11,7 +11,6 @@ This is Tom's master branch of the R3T sample app.
 * Followed R3T suggestion to remove spec subdirs and concentrate on spec/controllers:
 		 
 		git rm -r spec/views/
-	
 		git rm -r spec/helpers/
 
 * spork/autotest does not always pick up changes, specifically did not pickup 
@@ -22,9 +21,19 @@ This is Tom's master branch of the R3T sample app.
 
 		render_views
 
+*	To see differences between local branch and remote branch, have to use fetch.  `git fetch` is 
+  different from `git pull` in that `git pull` merges changes with local branch, while `git fetch` 
+	updates the index with entries for `origin/master`???
+
+		git fetch
+		git diff master origin/master | mate
+
+
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
 		git push heroku rspec_250:master
+
+*	Lesson 4: Introduces Blueprint CSS framework.  (May need to look at how this relates to Compass, I think hey are pretty different)
 		
 ## Full gem list installed in my gemset: ##
 
