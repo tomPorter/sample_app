@@ -28,6 +28,27 @@ This is Tom's master branch of the R3T sample app.
 		git fetch
 		git diff master origin/master | mate
 
+*	ruby\_fu:
+
+		%w(a b c).map(&:upcase)       #same as
+		%w(a b c).map {|x| x.upcase}
+		
+	dissected: means calling `to_proc` *&* on the *symbol* `upcase`. This returns an anonymous *Proc*
+  object that responds to the method named by the *symbol*.  This may be a ruby 1.9.2 thing
+ 	inherited from RoR.
+
+*	More understanding!  You can pass hash elements to a method if they are the last parameters
+	in the parameter list. Hence:
+
+		>>def f(x,h)
+		>?  puts x.inspect
+		>?  puts h.inspect
+		>?end
+		=> nil
+		>>f 'foo', :time => 3,:door => 'ajar'
+		"foo"
+		{:time=>3, :door=>"ajar"}
+		=> nil
 
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
