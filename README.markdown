@@ -14,7 +14,10 @@ This is Tom's master branch of the R3T sample app.
 		git rm -r spec/helpers/
 
 * spork/autotest does not always pick up changes, specifically did not pickup 
-  changes to application.html.erb.
+  changes to application.html.erb. 
+
+	_Depends on spork setup in spec\_helper.rb_
+
 * Had to add webrat to Gemfile for RSpec 2.50 to use have\_selector in spec example.
 * In order for spec/controllers/pages\_controller\_spec.rb to see inside rendered HTML
   (due to not having spec/views tests) had to add:
