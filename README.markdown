@@ -76,6 +76,8 @@ This is Tom's master branch of the R3T sample app.
 			  padding: 0.2em 0;
 			}
 
+* Partials are the **bomb**!  Similar to Hobo _DRYml_ and tag creation.
+
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
 		git push heroku rspec_250:master
