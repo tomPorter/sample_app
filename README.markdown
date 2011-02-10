@@ -53,6 +53,29 @@ This is Tom's master branch of the R3T sample app.
 		{:time=>3, :door=>"ajar"}
 		=> nil
 
+*	Start of CSS basics:
+
+	*	_foo_ {} indicates styling for a tag named _foo_
+	*	_foo_ _bar_ {} indicates styling for the _bar_ tag nested inside a _foo_ tag
+	*	_foo_:_action_ {} indicates styling for the _foo_ tag when _action_ takes place, like __hover__ or __click__
+	*	_foo_._stuff_ {} indicates styling for the _foo_ tag with a class named _stuff_
+			
+			<foo class="stuff">This is CSS!</foo>
+
+	*	._stuff_ {} indicates styling for **any** tag with class named _stuff_
+	*	**Serious** mangling of list items, this converts a normal vertical item list into a horizontal one (The `display: inline-block` does this):
+			
+			nav ul {
+			  margin: 0;
+			  padding: 0;
+			}
+
+			nav li {
+			  list-style-type: none;
+			  display: inline-block;
+			  padding: 0.2em 0;
+			}
+
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
 		git push heroku rspec_250:master
