@@ -14,5 +14,8 @@ end
 group :test do
  gem 'rspec', '2.5.0'
  gem 'spork'
+ gem 'guard-spork'
+ gem 'rb-fsevent'
  gem 'webrat'
+ gem 'growl'
 end

@@ -78,6 +78,9 @@ This is Tom's master branch of the R3T sample app.
 
 * Partials are the **bomb**!  Similar to Hobo _DRYml_ and tag creation.
 
+* I have a bit of confusion over differences between request specs and controller specs, particularly
+	when my pages\_controller\_spec.rb has a render\_views method to pul in page content.
+
 * When originally in rspec\_250 branch Pushed to heroku with:
 		
 		git push heroku rspec_250:master

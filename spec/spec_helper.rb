@@ -35,7 +35,10 @@ Spork.prefork do
     ### Part of a Spork hack. See http://bit.ly/arY19y
     # Emulate initializer set_clear_dependencies_hook in 
     # railties/lib/rails/application/bootstrap.rb
-    ActiveSupport::Dependencies.clear
+    if Spork.using_spork?
+      ActiveSupport::Dependencies.clear
+      ActiveRecord::Base.instantiate_observers
+    end
     
     def test_sign_in(user)
       controller.sign_in(user)
