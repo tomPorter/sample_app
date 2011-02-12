@@ -79,7 +79,9 @@ This is Tom's master branch of the R3T sample app.
 * Partials are the **bomb**!  Similar to Hobo _DRYml_ and tag creation.
 
 * I have a bit of confusion over differences between request specs and controller specs, particularly
-	when my pages\_controller\_spec.rb has a render\_views method to pul in page content.
+	when my pages\_controller\_spec.rb has a render\_views method to pul in page content.  Difficult to 
+	make spork reload when changing routes, have to run autotest bare to test them.  I installed 	
+	'guard-rails' to try to solve this, but not much help.
 
 * When originally in rspec\_250 branch Pushed to heroku with:
 		

@@ -1,4 +1,5 @@
 require 'spec_helper'
+## Tests routes
 
 describe "LayoutLinks" do
   
