@@ -6,6 +6,7 @@ SampleApp::Application.routes.draw do
   # 
   # get "pages/about"
 
+  ## matches URL to controller#action
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
