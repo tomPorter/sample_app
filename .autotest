@@ -1,2 +1,10 @@
 require 'autotest/growl'
 require 'autotest/fsevent'
+
+# Comment out if you do not want autotest to run request spec tests
+# since they may slow autotest down.
+Autotest.add_hook :initialize do |autotest| 
+  autotest.add_mapping(/^spec\/requests\/.*_spec\.rb$/) do
+    autotest.files_matching(/^spec\/requests\/.*_spec\.rb$/) 
+  end
+end
