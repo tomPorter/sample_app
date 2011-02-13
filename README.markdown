@@ -4,6 +4,13 @@ This is Tom's master branch of the R3T sample app.
 
 ## Notes: ##
 
+* Deployed at [afternoon-spring-183.heroku.com](http://afternoon-spring-183.heroku.com)
+
+* __NOTE__ last test in LayoutLinks spec does NOT stay on home page, but does follow each
+  link as it is clicked, so only reason all these links can be tested in one test is that the
+  occur on all pages.  That's why the 'Sign up now!' link had to be pressed first, since it
+  is only on the home page.
+
 * Created pages controller using:
 
 		rails generate controller Pages home contact
