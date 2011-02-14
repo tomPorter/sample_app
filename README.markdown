@@ -4,6 +4,20 @@ This is Tom's master branch of the R3T sample app.
 
 ## Notes: ##
 
+* Lesson 6 at 1:14:05 discusses creation of two Users in memory failing uniqueness validation
+	on email because not saved to DB yet, and tries to solve the problem by using an index on
+	email address??!!  See R3T book on his details.
+
+* foo! methods in Rails generally mean that method will throw error if there are 
+	problems, as opposed to interpreting as being a method that modifies calling object.
+
+* Varied from tutorial by using email validation with a custom validation in
+	app/validators.  See app/validators/email\_validator.rb  from [http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/](http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/)
+
+* Added annotate-models to Gemfile
+
+	rails console --sandbox insulates DB from permanent changes
+
 * Deployed at [afternoon-spring-183.heroku.com](http://afternoon-spring-183.heroku.com)
 
 * __NOTE__ last test in LayoutLinks spec does NOT stay on home page, but does follow each
