@@ -19,6 +19,6 @@ group :test do
  gem 'rb-fsevent'
  gem 'webrat'
 end
-group :osx do
+group :osx_test do
  gem 'growl'
 end
