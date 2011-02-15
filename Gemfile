@@ -19,6 +19,6 @@ group :test do
  gem 'webrat'
  gem 'growl'
 end
-group :osx do
+group :osx_test do
  gem 'growl'
 end
