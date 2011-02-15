@@ -17,5 +17,8 @@ group :test do
  gem 'guard-spork'
  gem 'rb-fsevent'
  gem 'webrat'
- #gem 'growl'
+ gem 'growl'
+end
+group :osx do
+ gem 'growl'
 end
