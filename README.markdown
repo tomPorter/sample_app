@@ -4,12 +4,31 @@ This is Tom's master branch of the R3T sample app.
 
 ## Notes: ##
 
+* Basic additional column migration:
+
+		rails generate migration add_foo_to_model column:type
+
 * Lesson 6 at 1:14:05 discusses creation of two Users in memory failing uniqueness validation
 	on email because not saved to DB yet, and tries to solve the problem by using an index on
-	email address??!!  See R3T book on his details.
+	email address??!!  See R3T book on his details.  R3 rdoc on `validates_uniqueness_of` method
+ 	_does_ document existence of race conditions in AR ORM.  Not so good.  
+
+  Worse is that
+  if you create unique index, this will prevent dupe keys, but AR throws a general
+	ActiveRecord::StatementInvalid exception that you will have to differentiate from other
+	types of errors by parsing the DB-specific exception message to figure this out and ask the
+	user to redo the operation. "You have entered an email address that belongs to someone else,
+  please try again."
+
+	**UPDATE: Actually R3 docs for** `validates_uniqueness_of` **are not current:  R3 throws an 
+	ActiveRecord::RecordNotUnique 
+	exception if DB uniqueness constraints are violated.**
 
 * foo! methods in Rails generally mean that method will throw error if there are 
 	problems, as opposed to interpreting as being a method that modifies calling object.
+	Model.create model.create! - create! throws error if model fails validation, while create will fail
+	silently, not creating the instance in the DB, and returning an instance with nil id (which shows 
+	this occurred), but no real failure.
 
 * Varied from tutorial by using email validation with a custom validation in
 	app/validators.  See app/validators/email\_validator.rb  from [http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/](http://my.rails-royce.org/2010/07/21/email-validation-in-ruby-on-rails-without-regexp/)
