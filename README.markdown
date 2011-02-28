@@ -4,6 +4,9 @@ This is Tom's master branch of the R3T sample app.
 
 ## Notes: ##
 
+* _ToDo:_ Look into rails3-generators gem, along with haml-rails and jquery-rails gems for alternate
+	generators for shoulda, factory girl, haml, and jquery.
+
 * Basic additional column migration:
 
 		rails generate migration add_foo_to_model column:type
