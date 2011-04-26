@@ -11,6 +11,7 @@ group :development do
  gem 'rspec-rails', '2.5.0'
  gem 'wirble'
  gem 'annotate-models'
+ gem 'pry'
 end
 group :test do
  gem 'rspec', '2.5.0'
