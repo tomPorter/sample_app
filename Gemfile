@@ -12,6 +12,7 @@ group :development do
  gem 'wirble'
  gem 'annotate-models'
  gem 'pry'
+ #gem 'pry-doc' # for all core ruby docs
 end
 group :test do
  gem 'rspec', '2.5.0'
